@@ -16,7 +16,7 @@ def load_data(path):
     df = pd.read_csv(path)
     return df
 
-renewable_df_raw = load_data(path=r"..\\data\\raw\\renewable_power_plants_CH.csv")
+renewable_df_raw = load_data(path="renewable_power_plants_CH.csv")
 renewable_df = deepcopy(renewable_df_raw)
 
 renewable_df.dropna(subset=["lat", "lon"], inplace=True)
